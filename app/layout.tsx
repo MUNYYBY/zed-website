@@ -3,7 +3,7 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/contexts/theme-provider";
-import { inter, spaceGrotesk, jetbrainsMono } from "@/lib/fonts";
+import { spaceGrotesk, jetbrainsMono } from "@/lib/fonts";
 
 import { siteConfig } from "../config/site";
 import HomeLayout from "@/layout/HomeLayout";

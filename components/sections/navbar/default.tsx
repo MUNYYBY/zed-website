@@ -11,7 +11,6 @@ import {
   NavbarLeft,
   NavbarRight,
 } from "../../ui/navbar";
-import Navigation from "../../ui/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
 import Link from "next/link";
 
@@ -59,8 +58,6 @@ export default function Navbar({
       variant: "default",
     },
   ],
-  showNavigation = true,
-  customNavigation,
   className,
 }: NavbarProps) {
   return (

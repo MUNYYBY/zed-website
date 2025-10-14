@@ -4,13 +4,7 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 import Zed from "../../logos/zed";
-import {
-  Footer,
-  FooterBottom,
-  FooterColumn,
-  FooterContent,
-} from "../../ui/footer";
-import { ModeToggle } from "../../ui/mode-toggle";
+import { Footer, FooterBottom, FooterContent } from "../../ui/footer";
 
 interface FooterLink {
   text: string;
@@ -35,38 +29,10 @@ interface FooterProps {
 export default function FooterSection({
   logo = <Zed />,
   name = "Zed",
-  columns = [
-    {
-      title: "Product",
-      links: [
-        { text: "Features", href: "#features" },
-        { text: "Pricing", href: "#pricing" },
-        { text: "FAQ", href: "#faq" },
-      ],
-    },
-    {
-      title: "Download",
-      links: [
-        { text: "Google Play", href: siteConfig.links.playstore },
-        { text: "App Store", href: siteConfig.links.appstore },
-        { text: "Beta Testing", href: "/beta" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { text: "Help Center", href: "/help" },
-        { text: "Contact Us", href: siteConfig.links.email },
-        { text: "Twitter", href: siteConfig.links.twitter },
-        { text: "GitHub", href: siteConfig.links.github },
-      ],
-    },
-  ],
   policies = [
     { text: "Privacy Policy", href: "/privacy-policy" },
     { text: "Terms of Service", href: "/terms-of-service" },
   ],
-  showModeToggle = true,
   className,
 }: FooterProps) {
   return (
