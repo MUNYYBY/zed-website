@@ -34,8 +34,8 @@ export default function Hero({
   description = "Transform, enhance, and create stunning visuals with cutting-edge artificial intelligence. From AI generation to professional retouching - all in one powerful mobile app.",
   mockup = (
     <Screenshot
-      srcLight="/dashboard-light.png"
-      srcDark="/dashboard-dark.png"
+      srcLight="/dashboard.png"
+      srcDark="/dashboard.png"
       alt="Zed image editing app screenshot"
       width={1248}
       height={765}
