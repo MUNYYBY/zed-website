@@ -10,8 +10,7 @@ import Stats from "../components/sections/stats/default";
 
 export default function Home() {
   return (
-    <main className="bg-background text-foreground min-h-screen w-full overflow-hidden">
-      <Navbar />
+    <>
       <Hero />
       {/* <Logos /> */}
       <Items />
@@ -19,7 +18,6 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <CTA />
-      <Footer />
-    </main>
+    </>
   );
 }

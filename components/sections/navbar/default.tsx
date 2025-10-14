@@ -43,7 +43,7 @@ interface NavbarProps {
 export default function Navbar({
   logo = <Zed />,
   name = "Zed",
-  homeUrl = siteConfig.url,
+  homeUrl = "/",
   mobileLinks = [
     { text: "Features", href: "#features" },
     { text: "Pricing", href: "#pricing" },
@@ -51,7 +51,7 @@ export default function Navbar({
     { text: "Support", href: "/help" },
   ],
   actions = [
-    { text: "Support", href: siteConfig.url + "/help", isButton: false },
+    { text: "Support", href: "/help", isButton: false },
     {
       text: "Download App",
       href: siteConfig.getStartedUrl,
@@ -69,13 +69,13 @@ export default function Navbar({
       <div className="max-w-container relative mx-auto">
         <NavbarComponent>
           <NavbarLeft>
-            <a
+            <Link
               href={homeUrl}
               className="flex items-center gap-2 text-xl font-bold"
             >
               {logo}
               {name}
-            </a>
+            </Link>
           </NavbarLeft>
           {/* <nav className="flex items-center justify-center gap-6 font-medium">
             {mobileLinks.map((link, index) => (

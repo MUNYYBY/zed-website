@@ -10,7 +10,7 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/zedaiapp",
     github: "https://github.com/zed-ai/zed-app",
-    email: "mailto:hello@zed-ai.app",
+    email: "mailto:info@logicleaps.com",
     playstore: "https://play.google.com/store/apps/details?id=com.zed.ai",
     appstore: "https://apps.apple.com/app/zed-ai/id123456789",
   },
@@ -31,6 +31,8 @@ export const siteConfig = {
     processing: "Real-time",
     upscaling: "4x",
   },
+  copyRights: "© 2025 Zed By LogicLeaps. All rights reserved",
+  email: "info@logicleaps.com",
 };
 
 export type SiteConfig = typeof siteConfig;

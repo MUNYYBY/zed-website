@@ -36,7 +36,7 @@ export default function Hero({
     <Screenshot
       srcLight="/dashboard-light.png"
       srcDark="/dashboard-dark.png"
-      alt="Zed AI image editing app screenshot"
+      alt="Zed image editing app screenshot"
       width={1248}
       height={765}
       className="w-full"

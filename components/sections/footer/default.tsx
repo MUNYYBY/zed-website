@@ -39,9 +39,9 @@ export default function FooterSection({
     {
       title: "Product",
       links: [
-        { text: "Features", href: siteConfig.url + "#features" },
-        { text: "Pricing", href: siteConfig.url + "#pricing" },
-        { text: "FAQ", href: siteConfig.url + "#faq" },
+        { text: "Features", href: "#features" },
+        { text: "Pricing", href: "#pricing" },
+        { text: "FAQ", href: "#faq" },
       ],
     },
     {
@@ -49,23 +49,22 @@ export default function FooterSection({
       links: [
         { text: "Google Play", href: siteConfig.links.playstore },
         { text: "App Store", href: siteConfig.links.appstore },
-        { text: "Beta Testing", href: siteConfig.url + "/beta" },
+        { text: "Beta Testing", href: "/beta" },
       ],
     },
     {
       title: "Support",
       links: [
-        { text: "Help Center", href: siteConfig.url + "/help" },
+        { text: "Help Center", href: "/help" },
         { text: "Contact Us", href: siteConfig.links.email },
         { text: "Twitter", href: siteConfig.links.twitter },
         { text: "GitHub", href: siteConfig.links.github },
       ],
     },
   ],
-  copyright = "© 2025 Zed AI. All rights reserved",
   policies = [
-    { text: "Privacy Policy", href: siteConfig.url },
-    { text: "Terms of Service", href: siteConfig.url },
+    { text: "Privacy Policy", href: "/privacy-policy" },
+    { text: "Terms of Service", href: "/terms-of-service" },
   ],
   showModeToggle = true,
   className,
@@ -74,14 +73,20 @@ export default function FooterSection({
     <footer className={cn("bg-background w-full px-4", className)}>
       <div className="max-w-container mx-auto">
         <Footer>
+          <div className="flex w-full items-center justify-center">
+            <div className="flex items-center gap-2">
+              {logo}
+              <h3 className="text-xl font-bold">{name}</h3>
+            </div>
+          </div>
           <FooterContent>
-            <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
+            {/* <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
               <div className="flex items-center gap-2">
                 {logo}
                 <h3 className="text-xl font-bold">{name}</h3>
               </div>
-            </FooterColumn>
-            {columns.map((column, index) => (
+            </FooterColumn> */}
+            {/* {columns.map((column, index) => (
               <FooterColumn key={index}>
                 <h3 className="text-md pt-1 font-semibold">{column.title}</h3>
                 {column.links.map((link, linkIndex) => (
@@ -94,17 +99,17 @@ export default function FooterSection({
                   </a>
                 ))}
               </FooterColumn>
-            ))}
+            ))} */}
           </FooterContent>
           <FooterBottom>
-            <div>{copyright}</div>
+            <div>{siteConfig.copyRights}</div>
             <div className="flex items-center gap-4">
               {policies.map((policy, index) => (
                 <a key={index} href={policy.href}>
                   {policy.text}
                 </a>
               ))}
-              {showModeToggle && <ModeToggle />}
+              {/* {showModeToggle && <ModeToggle />} */}
             </div>
           </FooterBottom>
         </Footer>

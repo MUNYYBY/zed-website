@@ -114,10 +114,10 @@ export default function FAQ({
           <p className="text-muted-foreground mb-4 max-w-[580px]">
             If you have questions about billing or need help, contact us at{" "}
             <a
-              href={siteConfig.links.email}
+              href={"mailto:" + siteConfig.email}
               className="underline underline-offset-2"
             >
-              hello@zed-ai.app
+              {siteConfig.email}
             </a>
             .
           </p>

@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { inter, spaceGrotesk, jetbrainsMono } from "@/lib/fonts";
 
 import { siteConfig } from "../config/site";
+import HomeLayout from "@/layout/HomeLayout";
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Zed AI Team",
+      name: "Zed Team",
       url: siteConfig.url,
     },
   ],
@@ -70,7 +71,9 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.className} ${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <HomeLayout>{children}</HomeLayout>
+        </ThemeProvider>
       </body>
     </html>
   );
