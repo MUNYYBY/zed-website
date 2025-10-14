@@ -3,7 +3,7 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/contexts/theme-provider";
-import { inter } from "@/lib/fonts";
+import { inter, spaceGrotesk, jetbrainsMono } from "@/lib/fonts";
 
 import { siteConfig } from "../config/site";
 
@@ -67,7 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ colorScheme: "dark" }} className="dark">
-      <body className={`${inter.className} bg-background antialiased`}>
+      <body
+        className={`${spaceGrotesk.className} ${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background antialiased`}
+      >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

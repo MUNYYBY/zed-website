@@ -13,6 +13,7 @@ import {
 } from "../../ui/navbar";
 import Navigation from "../../ui/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
+import Link from "next/link";
 
 interface NavbarLink {
   text: string;
@@ -44,10 +45,10 @@ export default function Navbar({
   name = "Zed",
   homeUrl = siteConfig.url,
   mobileLinks = [
-    { text: "Features", href: siteConfig.url + "#features" },
-    { text: "Pricing", href: siteConfig.url + "#pricing" },
-    { text: "FAQ", href: siteConfig.url + "#faq" },
-    { text: "Support", href: siteConfig.url + "/help" },
+    { text: "Features", href: "#features" },
+    { text: "Pricing", href: "#pricing" },
+    { text: "FAQ", href: "#faq" },
+    { text: "Support", href: "/help" },
   ],
   actions = [
     { text: "Support", href: siteConfig.url + "/help", isButton: false },
@@ -75,8 +76,14 @@ export default function Navbar({
               {logo}
               {name}
             </a>
-            {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
+          {/* <nav className="flex items-center justify-center gap-6 font-medium">
+            {mobileLinks.map((link, index) => (
+              <Link key={index} href={link.href} className="">
+                {link.text}
+              </Link>
+            ))}
+          </nav> */}
           <NavbarRight>
             {actions.map((action, index) =>
               action.isButton ? (
@@ -121,13 +128,13 @@ export default function Navbar({
                     <span>{name}</span>
                   </a>
                   {mobileLinks.map((link, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={link.href}
                       className="text-muted-foreground hover:text-foreground"
                     >
                       {link.text}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </SheetContent>
