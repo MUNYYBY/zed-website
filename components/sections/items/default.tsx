@@ -1,16 +1,16 @@
 import {
-  BlocksIcon,
-  EclipseIcon,
-  FastForwardIcon,
-  LanguagesIcon,
-  MonitorSmartphoneIcon,
-  RocketIcon,
-  ScanFaceIcon,
-  SquarePenIcon,
+  BrushIcon,
+  ImageIcon,
+  SparklesIcon,
+  WandIcon,
+  ZapIcon,
+  EyeIcon,
+  PaletteIcon,
+  ScissorsIcon,
 } from "lucide-react";
 import { ReactNode } from "react";
 
-import { Item, ItemDescription,ItemIcon, ItemTitle } from "../../ui/item";
+import { Item, ItemDescription, ItemIcon, ItemTitle } from "../../ui/item";
 import { Section } from "../../ui/section";
 
 interface ItemProps {
@@ -26,50 +26,49 @@ interface ItemsProps {
 }
 
 export default function Items({
-  title = "Everything you need. Nothing you don't.",
+  title = "Professional AI Image Editing Features",
   items = [
     {
-      title: "Accessibility first",
-      description: "Fully WCAG 2.0 compliant, made with best a11y practices",
-      icon: <ScanFaceIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Responsive design",
-      description: "Looks and works great on any device and screen size",
-      icon: <MonitorSmartphoneIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Light and dark mode",
+      title: "AI Image Generation",
       description:
-        "Seamless switching between color schemes, 6 themes included",
-      icon: <EclipseIcon className="size-5 stroke-1" />,
+        "Create stunning visuals from text prompts using advanced AI models",
+      icon: <SparklesIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Easy to customize",
-      description: "Flexible options to match your product or brand",
-      icon: <BlocksIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Top-level performance",
-      description: "Made for lightning-fast load times and smooth interactions",
-      icon: <FastForwardIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Production ready",
-      description: "Thoroughly tested and launch-prepared",
-      icon: <RocketIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Made for localisation",
+      title: "Beauty & Portrait Tools",
       description:
-        "Easy to implement support for multiple languages and regions",
-      icon: <LanguagesIcon className="size-5 stroke-1" />,
+        "Auto-enhance facial features, remove blemishes, brighten eyes",
+      icon: <EyeIcon className="size-5 stroke-1" />,
     },
     {
-      title: "CMS friendly",
-      description:
-        "Built to work with your any headless content management system",
-      icon: <SquarePenIcon className="size-5 stroke-1" />,
+      title: "Smart Object Removal",
+      description: "Detect and replace objects seamlessly with AI precision",
+      icon: <WandIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Background Magic",
+      description: "Remove, replace, or blur backgrounds with one tap",
+      icon: <ImageIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Super Resolution",
+      description: "Upscale images up to 4x without quality loss using AI",
+      icon: <ZapIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Professional Filters",
+      description: "15+ cinematic filters with real-time preview",
+      icon: <PaletteIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Vector Art Creation",
+      description: "Transform photos into stunning vector illustrations",
+      icon: <BrushIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Essential Editing",
+      description: "Crop, rotate, resize with intuitive gesture controls",
+      icon: <ScissorsIcon className="size-5 stroke-1" />,
     },
   ],
   className,

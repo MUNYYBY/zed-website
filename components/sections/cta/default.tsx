@@ -22,11 +22,11 @@ interface CTAProps {
 }
 
 export default function CTA({
-  title = "Start building",
+  title = "Transform Your Images with AI Today",
   buttons = [
     {
       href: siteConfig.getStartedUrl,
-      text: "Get Started",
+      text: "Download Zed Now",
       variant: "default",
     },
   ],

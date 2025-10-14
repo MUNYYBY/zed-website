@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../../logos/launch-ui";
+import Zed from "../../logos/zed";
 import {
   Footer,
   FooterBottom,
@@ -33,34 +33,36 @@ interface FooterProps {
 }
 
 export default function FooterSection({
-  logo = <LaunchUI />,
-  name = "Launch UI",
+  logo = <Zed />,
+  name = "Zed",
   columns = [
     {
       title: "Product",
       links: [
-        { text: "Changelog", href: siteConfig.url },
-        { text: "Documentation", href: siteConfig.url },
+        { text: "Features", href: siteConfig.url + "#features" },
+        { text: "Pricing", href: siteConfig.url + "#pricing" },
+        { text: "FAQ", href: siteConfig.url + "#faq" },
       ],
     },
     {
-      title: "Company",
+      title: "Download",
       links: [
-        { text: "About", href: siteConfig.url },
-        { text: "Careers", href: siteConfig.url },
-        { text: "Blog", href: siteConfig.url },
+        { text: "Google Play", href: siteConfig.links.playstore },
+        { text: "App Store", href: siteConfig.links.appstore },
+        { text: "Beta Testing", href: siteConfig.url + "/beta" },
       ],
     },
     {
-      title: "Contact",
+      title: "Support",
       links: [
-        { text: "Discord", href: siteConfig.url },
-        { text: "Twitter", href: siteConfig.url },
-        { text: "Github", href: siteConfig.links.github },
+        { text: "Help Center", href: siteConfig.url + "/help" },
+        { text: "Contact Us", href: siteConfig.links.email },
+        { text: "Twitter", href: siteConfig.links.twitter },
+        { text: "GitHub", href: siteConfig.links.github },
       ],
     },
   ],
-  copyright = "© 2025 Mikołaj Dobrucki. All rights reserved",
+  copyright = "© 2025 Zed AI. All rights reserved",
   policies = [
     { text: "Privacy Policy", href: siteConfig.url },
     { text: "Terms of Service", href: siteConfig.url },

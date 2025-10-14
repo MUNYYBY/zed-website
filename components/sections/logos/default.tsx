@@ -2,11 +2,11 @@ import { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
 
-import Figma from "../../logos/figma";
-import React from "../../logos/react";
-import ShadcnUi from "../../logos/shadcn-ui";
-import Tailwind from "../../logos/tailwind";
-import TypeScript from "../../logos/typescript";
+import AI from "../../logos/ai";
+import AWS from "../../logos/aws";
+import Flutter from "../../logos/flutter";
+import NodeJS from "../../logos/nodejs";
+import Python from "../../logos/python";
 import { Badge } from "../../ui/badge";
 import Logo from "../../ui/logo";
 import { Section } from "../../ui/section";
@@ -19,35 +19,18 @@ interface LogosProps {
 }
 
 export default function Logos({
-  title = "Built with industry-standard tools and best practices",
+  title = "Powered by cutting-edge technology",
   badge = (
     <Badge variant="outline" className="border-brand/30 text-brand">
-      Last updated: {siteConfig.stats.updated}
+      Built with AI • Last updated: {siteConfig.stats.updated}
     </Badge>
   ),
   logos = [
-    <Logo key="figma" image={Figma} name="Figma" />,
-    <Logo key="react" image={React} name="React" version="19.1.1" />,
-    <Logo
-      key="typescript"
-      image={TypeScript}
-      name="TypeScript"
-      version="5.9.2"
-    />,
-    <Logo
-      key="shadcn"
-      image={ShadcnUi}
-      name="Shadcn/ui"
-      version="2.10.0"
-      badge="New"
-    />,
-    <Logo
-      key="tailwind"
-      image={Tailwind}
-      name="Tailwind"
-      version="4.1"
-      badge="New"
-    />,
+    <Logo key="flutter" image={Flutter} name="Flutter" version="3.24" />,
+    <Logo key="python" image={Python} name="Python" version="3.11" />,
+    <Logo key="nodejs" image={NodeJS} name="Node.js" version="20.x" />,
+    <Logo key="aws" image={AWS} name="AWS" badge="Cloud" />,
+    <Logo key="ai" image={AI} name="AI Models" badge="New" />,
   ],
   className,
 }: LogosProps) {

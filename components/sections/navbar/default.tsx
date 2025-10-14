@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../../logos/launch-ui";
+import Zed from "../../logos/zed";
 import { Button, type ButtonProps } from "../../ui/button";
 import {
   Navbar as NavbarComponent,
@@ -40,19 +40,20 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  logo = <LaunchUI />,
-  name = "Launch UI",
+  logo = <Zed />,
+  name = "Zed",
   homeUrl = siteConfig.url,
   mobileLinks = [
-    { text: "Getting Started", href: siteConfig.url },
-    { text: "Components", href: siteConfig.url },
-    { text: "Documentation", href: siteConfig.url },
+    { text: "Features", href: siteConfig.url + "#features" },
+    { text: "Pricing", href: siteConfig.url + "#pricing" },
+    { text: "FAQ", href: siteConfig.url + "#faq" },
+    { text: "Support", href: siteConfig.url + "/help" },
   ],
   actions = [
-    { text: "Sign in", href: siteConfig.url, isButton: false },
+    { text: "Support", href: siteConfig.url + "/help", isButton: false },
     {
-      text: "Get Started",
-      href: siteConfig.url,
+      text: "Download App",
+      href: siteConfig.getStartedUrl,
       isButton: true,
       variant: "default",
     },

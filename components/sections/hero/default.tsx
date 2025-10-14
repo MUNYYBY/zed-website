@@ -30,13 +30,13 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title = "Professional AI Image Editing at Your Fingertips",
+  description = "Transform, enhance, and create stunning visuals with cutting-edge artificial intelligence. From AI generation to professional retouching - all in one powerful mobile app.",
   mockup = (
     <Screenshot
       srcLight="/dashboard-light.png"
       srcDark="/dashboard-dark.png"
-      alt="Launch UI app screenshot"
+      alt="Zed AI image editing app screenshot"
       width={1248}
       height={765}
       className="w-full"
@@ -45,10 +45,10 @@ export default function Hero({
   badge = (
     <Badge variant="outline" className="animate-appear">
       <span className="text-muted-foreground">
-        New version of Launch UI is out!
+        🚀 Now Available on Google Play!
       </span>
       <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Get started
+        Download Now
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
@@ -56,12 +56,12 @@ export default function Hero({
   buttons = [
     {
       href: siteConfig.getStartedUrl,
-      text: "Get Started",
+      text: "Download Zed",
       variant: "default",
     },
     {
       href: siteConfig.links.github,
-      text: "Github",
+      text: "View Features",
       variant: "glow",
       icon: <Github className="mr-2 size-4" />,
     },

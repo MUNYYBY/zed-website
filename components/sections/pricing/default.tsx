@@ -1,4 +1,4 @@
-import { User, Users } from "lucide-react";
+import { Smartphone, Crown, Building } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -14,60 +14,68 @@ interface PricingProps {
 }
 
 export default function Pricing({
-  title = "Build your dream landing page, today.",
-  description = "Get lifetime access to all the components. No recurring fees. Just simple, transparent pricing.",
+  title = "Choose Your Creative Journey",
+  description = "Start free and upgrade as you create. No long-term commitments, cancel anytime.",
   plans = [
     {
       name: "Free",
-      description: "For everyone starting out on a website for their big idea",
+      icon: <Smartphone className="size-4" />,
+      description: "Perfect for exploring AI image editing capabilities",
       price: 0,
-      priceNote: "Free and open-source forever.",
+      priceNote: "Always free with core features",
       cta: {
         variant: "glow",
-        label: "Get started for free",
-        href: "/docs/getting-started/introduction",
+        label: "Download Free",
+        href: siteConfig.getStartedUrl,
       },
       features: [
-        "1 website template",
-        "9 blocks and sections",
-        "4 custom animations",
+        "5 AI generations per day",
+        "Basic filters & editing tools",
+        "Background removal",
+        "720p image exports",
+        "Watermark on exports",
       ],
       variant: "default",
       className: "hidden lg:flex",
     },
     {
       name: "Pro",
-      icon: <User className="size-4" />,
-      description: "For early-stage founders, solopreneurs and indie devs",
-      price: 99,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      icon: <Crown className="size-4" />,
+      description: "For creators who want unlimited AI power",
+      price: 9.99,
+      priceNote: "per month, billed monthly",
       cta: {
         variant: "default",
-        label: "Get all-access",
+        label: "Go Pro",
         href: siteConfig.pricing.pro,
       },
       features: [
-        `${siteConfig.stats.websiteTemplates} website templates`,
-        `${siteConfig.stats.appTemplates} app templates`,
-        `${siteConfig.stats.sections} blocks and sections`,
-        `${siteConfig.stats.illustrations} illustrations`,
-        `${siteConfig.stats.animations} custom animations`,
+        "Unlimited AI generations",
+        "All premium filters & effects",
+        "4K image exports",
+        "No watermarks",
+        "Priority processing",
+        "Advanced retouching tools",
       ],
       variant: "glow-brand",
     },
     {
-      name: "Pro Team",
-      icon: <Users className="size-4" />,
-      description: "For teams and agencies working on cool products together",
-      price: 499,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      name: "Team",
+      icon: <Building className="size-4" />,
+      description: "For businesses and creative teams",
+      price: 29.99,
+      priceNote: "per month, up to 10 users",
       cta: {
         variant: "default",
-        label: "Get all-access for your team",
+        label: "Start Team Plan",
         href: siteConfig.pricing.team,
       },
       features: [
-        "All the templates, components and sections available for your entire team",
+        "Everything in Pro",
+        "Team collaboration features",
+        "Brand templates",
+        "Admin dashboard",
+        "Priority support",
       ],
       variant: "glow",
     },
